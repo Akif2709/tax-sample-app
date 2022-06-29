@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "tax-sample-app": "apps/tax-sample-app",
+    "tax-sample-app-e2e": "apps/tax-sample-app-e2e"
+  }
+}
