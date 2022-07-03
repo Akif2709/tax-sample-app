@@ -1,0 +1,10 @@
+<div *ngIf="adviesSignal" class="advies-signal-item d-block mb-3">
+  <a role="link" (click)="selectAdviesSignal()">
+    <span class="text-muted advies-signal-item__date">{{ adviesSignal.CreateDate | date: 'd MMM y' }}</span>
+    <br />
+    <span class="advies-signal-item__title" [class.advies-signal-item__title--bold]="!isSignalAlreadyRead">{{
+      adviesSignal.Title
+    }}</span>
+    <hr />
+  </a>
+</div>

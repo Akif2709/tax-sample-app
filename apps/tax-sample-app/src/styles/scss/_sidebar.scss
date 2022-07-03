@@ -1,0 +1,19 @@
+.sidebar {
+  flex: 0 0 $sidebar-width;
+  background-color: $color-light;
+  height: 100%;
+}
+
+.sidebar-container {
+  .list-group {
+    .list-group-item {
+      color: $color-muted;
+      border: none;
+
+      &.active {
+        color: black;
+        background-color: $color-light;
+      }
+    }
+  }
+}

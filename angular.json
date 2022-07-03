@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "core": "libs/core",
+    "features-klanten": "libs/features/klanten",
     "tax-sample-app": "apps/tax-sample-app",
     "tax-sample-app-e2e": "apps/tax-sample-app-e2e"
   }

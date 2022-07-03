@@ -14,11 +14,8 @@
         "polyfills": "apps/tax-sample-app/src/polyfills.ts",
         "tsConfig": "apps/tax-sample-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/tax-sample-app/src/favicon.ico",
-          "apps/tax-sample-app/src/assets"
-        ],
-        "styles": ["apps/tax-sample-app/src/styles.scss"],
+        "assets": ["apps/tax-sample-app/src/assets", "apps/tax-sample-app/src/favicon.ico"],
+        "styles": ["node_modules/bootstrap/dist/css/bootstrap.css", "apps/tax-sample-app/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -75,10 +72,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/tax-sample-app/src/**/*.ts",
-          "apps/tax-sample-app/src/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/tax-sample-app/src/**/*.ts", "apps/tax-sample-app/src/**/*.html"]
       }
     },
     "test": {

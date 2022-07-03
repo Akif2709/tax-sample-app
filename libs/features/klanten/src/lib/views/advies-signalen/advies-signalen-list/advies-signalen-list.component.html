@@ -1,0 +1,48 @@
+<ng-container *ngIf="(klant$ | async)?.AdviceSignals as adviceSignals">
+  <div class="d-block mx-5 pt-5 advies-signalen-container">
+    <h2 class="h4 mt-3 pb-3">AdviesSignalen</h2>
+    <hr />
+
+    <div class="d-flex align-items-center py-3">
+      <div class="mr-3">
+        <span class="text-align-center text-muted">Filter op jaar</span>
+      </div>
+      <div class="dropdown mx-2">
+        <button
+          class="btn dropdown-toggle"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {{ selectedYear }}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" *ngFor="let item of adviesSignalenYears" (click)="setSelectedYear(item)">{{
+            item
+          }}</a>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <ng-container *ngIf="adviceSignals[selectedYear || ''] as adviceSignalsOfYear">
+      <div class="d-block py-4 mb-4 mt-3">
+        <span>{{ selectedYear }}</span>
+        <br />
+        <span class="text-muted" *ngIf="adviceSignalsOfYear?.length as signalsNumber"
+          >{{ signalsNumber }} adviessignalen</span
+        >
+      </div>
+
+      <tax-sample-app-advies-signal-item
+        *ngFor="let item of adviceSignalsOfYear"
+        [adviesSignal]="item"
+        (selectItem)="handleSelectAdviesItem($event)"
+      ></tax-sample-app-advies-signal-item>
+    </ng-container>
+  </div>
+</ng-container>
+
+<router-outlet></router-outlet>

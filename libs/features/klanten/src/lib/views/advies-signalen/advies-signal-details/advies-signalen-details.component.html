@@ -1,0 +1,44 @@
+<ng-container *ngIf="adviesSignalDetails$ | async as itemDetails">
+  <div class="modal d-block" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="mx-5 pt-5 advies-signalen-details">
+            <div class="mb-5">
+              <h3 class="mb-4">{{ itemDetails.Title }}</h3>
+              <span class="text-muted"> {{ itemDetails.CreateDate | date: 'd MMMM y' }}</span>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <h4>Klant Gegevens</h4>
+              </div>
+              <div class="col-lg-9 d-flex flex-wrap mb-5">
+                <div *ngFor="let item of itemDetails.Klantgegevens.Parameters" class="advies-signalen-details--item">
+                  <div class="row">
+                    <span class="col-9 advies-signalen-details--item-label">{{ item.ParamName }}</span>
+                    <span class="col-3 p-0 pr-2">{{ item.ParamValue }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-lg-3">
+                <h4>Klant Gegevens</h4>
+              </div>
+              <div class="col-lg-9 d-flex flex-wrap mb-5">
+                {{ itemDetails.Description }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary mx-5 mx-2" (click)="closeModal()">
+            Venster Sluiten
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,43 @@
+.advies-signalen-container {
+  max-width: 820px;
+  button.dropdown-toggle {
+    border: 1px solid;
+    border-radius: 15px 15px 5px 5px;
+    height: 35px;
+    &:hover {
+      background-color: $color-light;
+    }
+  }
+
+  .dropdown-menu a {
+    &:hover {
+      background-color: $color-light;
+    }
+  }
+}
+
+.advies-signalen-details {
+  .advies-signalen-details--item {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
+  }
+
+  .advies-signalen-details--item-label {
+    font-weight: 500;
+  }
+}
+
+.advies-signal-item__date {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.advies-signal-item__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  &--bold {
+    font-weight: 600;
+  }
+}

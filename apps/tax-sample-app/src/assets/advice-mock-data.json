@@ -1,0 +1,154 @@
+{
+  "ClientName": "Bakker, L.",
+  "BsnFi": "262169366",
+  "AdviceSignals": [
+    {
+      "id": "1",
+      "CreateDate": "26-11-2020",
+      "Title": "Mogelijk niet voldoende geld gereserveerd voor de oude dag?",
+      "Status": 100,
+      "Klantgegevens": {
+        "Origin": "IB 2020",
+        "Parameters": [
+          {
+            "ParamName": "Waarde aanmerkelijk belang",
+            "ParamValue": 50000
+          }
+        ]
+      },
+      "Description": "Wanneer de bestuurder wegens omstandigheden tijdelijk niet meer in staat is de vennootschap te leiden, kan een vacuüm ontstaan: hij kan geen besluiten meer nemen. Vooral bij directeur-enig aandeelhouder bestaat dat gevaar. Het is raadzaam om bij de jaarlijkse algemene vergadering de tijdelijke waarneming als agendapunt op te nemen."
+    },
+    {
+      "id": "2",
+      "CreateDate": "12-9-2020",
+      "Title": "Waardesprong resulteert in €13.589 meer Box 3 Belasting",
+      "Status": 200,
+      "Klantgegevens": {
+        "Origin": "IB 2020",
+        "Parameters": [
+          {
+            "ParamName": "Aandelen, obligatied e.d",
+            "ParamValue": "200000"
+          },
+          {
+            "ParamName": "Box 3 belasting",
+            "ParamValue": "2143"
+          },
+          {
+            "ParamName": "Fiscaal partner?",
+            "ParamValue": "Nee"
+          }
+        ]
+      },
+      "Description": "De vrijstelling voor groene beleggingen is een vrij eenvoudige manier voor uw cliënt om de grondslag voor sparen en beleggen te verlagen en belasting te besparen."
+    },
+    {
+      "id": "3",
+      "CreateDate": "26-8-2020",
+      "Title": "Meer aflossen is fiscaal voordeliger dan sparen in Box 3",
+      "Status": 200,
+      "Klantgegevens": {
+        "Origin": "IB 2020",
+        "Parameters": [
+          {
+            "ParamName": "Totaal bank- en aandelenvermogen",
+            "ParamValue": "80000"
+          },
+          {
+            "ParamName": "Gemiddelde toename bank- en aandeelvermogen (%)",
+            "ParamValue": "95%"
+          },
+          {
+            "ParamName": "Laatste belastingaangifte",
+            "ParamValue": "2017"
+          },
+          {
+            "ParamName": "Gemiddelde toename bank- en aandeelvermogen (€)",
+            "ParamValue": "40000"
+          }
+        ]
+      },
+      "Description": "Wij zijn bij de berekening van de belastingdruk uitgegaan van het rendement zoals deze gemiddeld in de markt wordt behaald. Het werkelijk behaalde/te behalen rendement door uw cliënt kan hiervan afwijken en daardoor ook de door ons berekende belastingdruk van de twee boxen. Wij raden daarom aan om de daadwerkelijke belastingdruk na te rekenen op basis van de actuele gegevens van uw cliënt om na te gaan of overheveling naar box 3 interessant is voor uw cliënt.<br><br> Het box-3-vermogen kan worden overgeheveld naar box 2 door het in te brengen in een (nieuw op te richten) eigen BV of een fonds voor gemene rekening aan te gaan.<br><br> Met dit signaal beogen wij u een richtlijn te geven om deze mogelijkheid met uw cliënten nader te bekijken."
+    },
+    {
+      "id": "4",
+      "CreateDate": "26-7-2020",
+      "Title": "Verplichtingen rondom tijdelijk verhuur eigen woning?",
+      "Status": 200,
+      "Klantgegevens": {
+        "Origin": "IB 2020",
+        "Parameters": [
+          {
+            "ParamName": "Woning rente",
+            "ParamValue": "4500"
+          },
+          {
+            "ParamName": "Eigenwoningschuld 31/12",
+            "ParamValue": "190000"
+          },
+          {
+            "ParamName": "Belasting box 3",
+            "ParamValue": "2346"
+          },
+          {
+            "ParamName": "Heffinsvrij vermogen + aftrekbare schulden",
+            "ParamValue": "24437"
+          },
+          {
+            "ParamName": "Eigenwoningforfait",
+            "ParamValue": "1350"
+          },
+          {
+            "ParamName": "Belastbaar inkomen box 3",
+            "ParamValue": "7822"
+          },
+          {
+            "ParamName": "Liquide middelen",
+            "ParamValue": "45000"
+          }
+        ]
+      },
+      "Description": "Gezien de verhouding tussen de aftrek die wordt verkregen vanwege de eigenwoningschuld kan het fiscaal en financieel attractief zijn om de (resterende) eigenwoningschuld geheel of gedeeltelijk af te lossen door de aanwezige liquide middelen van box 3 aan te wenden.<br><br> Naast voordelen heeft het aflossen heeft ook nadelen. Als voorbeeld kan worden genoemd aan de gevolgen van de bijleenregeling wanneer uw cliënt verhuisd en de mogelijke toepassing van het nieuwe regime voor eigenwoningschulden dat sinds 2013 van kracht is.<br><br> Met dit signaal beogen wij u een richtlijn te geven om deze mogelijkheid met uw cliënten nader te bekijken."
+    },
+    {
+      "id": "5",
+      "CreateDate": "20-11-2018",
+      "Title": "Belastingbesparing bij gedeeltelijk aflossen eigenwoningschuld",
+      "Status": 200,
+      "Klantgegevens": {
+        "Origin": "IB 2018",
+        "Parameters": [
+          {
+            "ParamName": "Woning rente",
+            "ParamValue": "36000"
+          },
+          {
+            "ParamName": "Belastbaar inkomen box 3",
+            "ParamValue": "110223"
+          },
+          {
+            "ParamName": "Belasting box3",
+            "ParamValue": "6647"
+          },
+          {
+            "ParamName": "Liquide middelen",
+            "ParamValue": "23801"
+          },
+          {
+            "ParamName": "Eigenwoning forfait",
+            "ParamValue": "91722"
+          },
+          {
+            "ParamName": "Eigenwoningschuld 31/12",
+            "ParamValue": "234256"
+          },
+          {
+            "ParamName": "Heffinsvrij vermogen + aftrekbare schulden",
+            "ParamValue": "83090"
+          }
+        ]
+      },
+      "Description": "Het kan fiscaal en financieel aantrekkelijk zijn om resterende eigenwoningschuld af te lossen met liquide middelen van box3.<br><br> Naast voordelen heeft het afslossen ook nadelen. Bijvoorbeeld de gevolgen van de bijleenregeling. Wanneer uw cliënt verhuist kan het nieuwe regime voor eigenwoningschulden toepassing vinden (dit regime is sinds 2013 van kracht)."
+    }
+  ]
+}

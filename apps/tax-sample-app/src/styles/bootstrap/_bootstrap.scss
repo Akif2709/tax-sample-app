@@ -1,0 +1,9 @@
+/**
+* This file overrides bootstrap variables
+*/
+
+$theme-colors: (
+  'primary': #0a56b2,
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap';

@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/features/klanten",
+  "sourceRoot": "libs/features/klanten/src",
+  "prefix": "tax-sample-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/features/klanten"],
+      "options": {
+        "jestConfig": "libs/features/klanten/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/features/klanten/src/**/*.ts", "libs/features/klanten/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

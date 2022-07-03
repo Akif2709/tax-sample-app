@@ -1,0 +1,33 @@
+<div class="h-100 sidebar-container">
+  <div class="bg-white w-100 p-4 sidebar-container__header">
+    <h2 class="mb-2">BSN {{ klant?.ClientName }}</h2>
+    <span class="text-muted">BSN {{ klant?.BsnFi }}</span>
+  </div>
+  <hr class="m-0 p-0 text-muted" />
+  <div class="w-100">
+    <div class="list-group" id="myList" role="tablist">
+      <a
+        class="list-group-item list-group-item-action px-4"
+        routerLinkActive="active"
+        [routerLink]="['dossier']"
+        role="tab"
+        >Dossier</a
+      >
+      <a
+        class="list-group-item list-group-item-action px-4"
+        routerLinkActive="active"
+        [routerLink]="['advies-signalen']"
+        role="tab"
+      >
+        Adviessignalen
+      </a>
+      <a
+        class="list-group-item list-group-item-action px-4"
+        routerLinkActive="active"
+        [routerLink]="['overzicht']"
+        role="tab"
+        >Overzicht</a
+      >
+    </div>
+  </div>
+</div>

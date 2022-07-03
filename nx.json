@@ -18,12 +18,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "MjhmYWY0OGMtMTNlNy00MjIwLTg3N2MtNTJiMzAxYTM2Y2ExfHJlYWQtd3JpdGU="
       }
     }
@@ -48,7 +43,8 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush"
     }
   },
   "defaultProject": "tax-sample-app"
