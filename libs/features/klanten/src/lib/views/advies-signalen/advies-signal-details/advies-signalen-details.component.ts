@@ -10,9 +10,7 @@ import { Observable, tap } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdviesSignalenDetailsComponent implements OnInit {
-  readonly adviesSignalDetails$?: Observable<AdviesSignal | undefined> = this.storeService.adviseSignalDetails$.pipe(
-    tap(console.log),
-  );
+  readonly adviesSignalDetails$?: Observable<AdviesSignal | undefined> = this.storeService.adviseSignalDetails$
 
   constructor(
     private storeService: KlantenStoreService,
@@ -22,12 +20,10 @@ export class AdviesSignalenDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchAdviesSignalDetails();
-    this.storeService.adviseSignalDetails$.subscribe(console.log);
   }
 
   private fetchAdviesSignalDetails() {
     const itemID = this.activatedRoute.snapshot.params['id'];
-    console.log(itemID);
     this.storeService.fetchAdviesSignalDetails(itemID);
   }
 

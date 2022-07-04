@@ -1,8 +1,8 @@
 <div class="row h-100">
-  <div class="col sidebar h-100 px-0" *ngIf="storeService.klant$ | async as klant">
+  <div class="col-lg-3 sidebar px-0" *ngIf="storeService.klant$ | async as klant">
     <tax-sample-app-sidebar [klant]="klant"></tax-sample-app-sidebar>
   </div>
-  <div class="col">
+  <div class="col-lg-8">
     <router-outlet></router-outlet>
   </div>
 </div>

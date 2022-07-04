@@ -1,5 +1,5 @@
 <ng-container *ngIf="(klant$ | async)?.AdviceSignals as adviceSignals">
-  <div class="d-block mx-5 pt-5 advies-signalen-container">
+  <div class="d-block mx-lg-5 pt-5 mx-3 advies-signalen-container">
     <h2 class="h4 mt-3 pb-3">AdviesSignalen</h2>
     <hr />
 
@@ -16,33 +16,55 @@
           aria-haspopup="true"
           aria-expanded="false"
         >
-          {{ selectedYear }}
+          {{ adviesSignalenYears?.[0] }}
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" *ngFor="let item of adviesSignalenYears" (click)="setSelectedYear(item)">{{
-            item
-          }}</a>
+        <div
+          class="dropdown-menu"
+          (click)="$event.stopPropagation()"
+          aria-labelledby="dropdownMenuButton"
+          [formGroup]="form"
+        >
+          <a class="dropdown-item" *ngFor="let item of adviesSignalenYears">
+            <input
+              class="pr-2"
+              role="button"
+              formControlName="{{ item }}"
+              type="checkbox"
+              id="adviesSignalen-year-checkbox-{{ item }}"
+              aria-label="Checkbox"
+            />
+            <label for="adviesSignalen-year-checkbox-{{ item }}" role="button"> {{ item }} </label>
+          </a>
         </div>
       </div>
     </div>
     <hr />
-
-    <ng-container *ngIf="adviceSignals[selectedYear || ''] as adviceSignalsOfYear">
-      <div class="d-block py-4 mb-4 mt-3">
-        <span>{{ selectedYear }}</span>
-        <br />
-        <span class="text-muted" *ngIf="adviceSignalsOfYear?.length as signalsNumber"
-          >{{ signalsNumber }} adviessignalen</span
-        >
-      </div>
-
-      <tax-sample-app-advies-signal-item
-        *ngFor="let item of adviceSignalsOfYear"
-        [adviesSignal]="item"
-        (selectItem)="handleSelectAdviesItem($event)"
-      ></tax-sample-app-advies-signal-item>
+    <ng-container *ngFor="let item of adviesSignalenYears">
+      <ng-container *ngIf="form.value[item]">
+        <ng-container
+          *ngTemplateOutlet="adviesList; context: { year: item, adviceSignals: adviceSignals }"
+        ></ng-container>
+      </ng-container>
     </ng-container>
   </div>
 </ng-container>
 
 <router-outlet></router-outlet>
+
+<ng-template #adviesList [ngOutletContext]="context" let-year="year" let-adviceSignals="adviceSignals">
+  <ng-container *ngIf="adviceSignals[year || ''] as adviceSignalsOfYear">
+    <div class="d-block py-4 mb-4 mt-3">
+      <span class="h5">{{ year }}</span>
+      <br />
+      <span class="text-muted" *ngIf="adviceSignalsOfYear?.length as signalsNumber"
+        >{{ signalsNumber }} adviessignalen</span
+      >
+    </div>
+
+    <tax-sample-app-advies-signal-item
+      *ngFor="let item of adviceSignalsOfYear"
+      [adviesSignal]="item"
+      (selectItem)="handleSelectAdviesItem($event)"
+    ></tax-sample-app-advies-signal-item>
+  </ng-container>
+</ng-template>

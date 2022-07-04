@@ -11,7 +11,6 @@ export function groupAdviesSignalen(adviceSignals: Array<AdviesSignal>): Grouped
     } else {
       result = { ...result, [year]: [item] };
     }
-    console.log(result);
     return result;
   }, {} as GroupedAdviesSignalen);
 }

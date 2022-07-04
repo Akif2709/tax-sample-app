@@ -1,11 +1,12 @@
 import { KlantenStoreService } from '../../../store/store.service';
 import { KlantWithGroupedAdviesSignalen } from '../../../models/klant.modal';
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Klant } from '@tax-sample-app/core';
-import { Observable, skipWhile, tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { groupAdviesSignalen, sortAdviesSignalen } from '../../../utils/mappers';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'tax-sample-app-advies-signalen-list',
@@ -29,12 +30,18 @@ export class AdviesSignalenListComponent {
     tap(klant => {
       if (klant) {
         this.adviesSignalenYears = Object.keys(klant.AdviceSignals).sort((a, b) => Number(b) - Number(a));
-        this.selectedYear = this.adviesSignalenYears?.[0];
+        this.createForm(this.adviesSignalenYears);
       }
     }),
   );
 
-  selectedYear?: string;
+  /**
+   * Reactive form to store selected years
+   */
+  readonly form = new FormGroup({});
+  /**
+   * Year of the advies signalen, this array is sorted and used in the places where sorting is important
+   */
   adviesSignalenYears?: Array<string>;
 
   constructor(
@@ -43,11 +50,14 @@ export class AdviesSignalenListComponent {
     private readonly activatedRoute: ActivatedRoute,
   ) {}
 
-  setSelectedYear(value: string) {
-    this.selectedYear = value;
-  }
-
   handleSelectAdviesItem(id: string) {
     this.router.navigate([id], { relativeTo: this.activatedRoute });
+  }
+
+  createForm(years: Array<string>) {
+    years.forEach((year, index) => {
+      const defaultValue = index === 0 ? true : false;
+      this.form.addControl(year, new FormControl(defaultValue));
+    });
   }
 }

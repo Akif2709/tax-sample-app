@@ -1,7 +1,7 @@
 <ng-container *ngIf="adviesSignalDetails$ | async as itemDetails">
   <div class="modal d-block" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-xl" role="document">
-      <div class="modal-content">
+      <div class="modal-content shadow-lg">
         <div class="modal-body">
           <div class="mx-5 pt-5 advies-signalen-details">
             <div class="mb-5">
@@ -17,7 +17,7 @@
                 <div *ngFor="let item of itemDetails.Klantgegevens.Parameters" class="advies-signalen-details--item">
                   <div class="row">
                     <span class="col-9 advies-signalen-details--item-label">{{ item.ParamName }}</span>
-                    <span class="col-3 p-0 pr-2">{{ item.ParamValue }}</span>
+                    <span class="col-3 p-0 pr-2">€ {{ item.ParamValue }}</span>
                   </div>
                 </div>
               </div>

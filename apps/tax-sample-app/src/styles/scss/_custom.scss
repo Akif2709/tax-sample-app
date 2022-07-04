@@ -9,9 +9,19 @@
     }
   }
 
-  .dropdown-menu a {
-    &:hover {
-      background-color: $color-light;
+  .dropdown-menu {
+    min-width: 6rem;
+    a {
+      &:hover {
+        background-color: $color-light;
+      }
+    }
+
+    .dropdown-item {
+      padding: 0.25rem 0.5rem;
+      > label {
+        padding-left: 0.5rem;
+      }
     }
   }
 }
