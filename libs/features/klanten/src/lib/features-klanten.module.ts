@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { OverzichtComponent } from './views/overzicht/overzicht.component';
 import { FeaturesKlantenComponent } from './features-klanten.component';
-import { KlantenTransferStoreModule } from './store/store.module';
+import { KlantenStoreModule } from './store/store.module';
 import { AdviesSignalenModule } from './views/advies-signalen/advies-signalen.module';
 import { OverzichtModule } from './views/overzicht/overzicht.module';
 import { DossierModule } from './views/dossier/dossier.module';
@@ -53,7 +53,7 @@ const components = [SidebarComponent, FeaturesKlantenComponent];
     CommonModule,
     RouterModule.forChild(ROUTES),
     CoreModule,
-    KlantenTransferStoreModule,
+    KlantenStoreModule,
     OverzichtModule,
     DossierModule,
     AdviesSignalenModule,

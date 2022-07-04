@@ -11,4 +11,4 @@ import { KlantenStoreService } from './store.service';
   imports: [StoreModule.forFeature(KLANTEN_STORE_SELECTOR, KlantenReducer), EffectsModule.forFeature([KlantenEffects])],
   providers: [KlantenStoreService],
 })
-export class KlantenTransferStoreModule {}
+export class KlantenStoreModule {}
