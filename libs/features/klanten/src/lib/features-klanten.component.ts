@@ -10,6 +10,5 @@ export class FeaturesKlantenComponent implements OnInit {
 
   ngOnInit(): void {
     this.storeService.fetchKlant();
-    this.storeService.fetchAdviesSignalDetails('3');
   }
 }

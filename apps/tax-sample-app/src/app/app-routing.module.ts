@@ -10,10 +10,10 @@ const ROUTES: Routes = [
   },
   { path: 'aangiften', component: EmptyPageComponent },
   { path: 'service-berichten', component: EmptyPageComponent },
-  // {
-  //   path: '**',
-  //   redirectTo: 'klanten',
-  // },
+  {
+    path: '**',
+    redirectTo: 'klanten',
+  },
 ];
 
 @NgModule({
